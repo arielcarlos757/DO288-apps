@@ -79,7 +79,7 @@ pipeline {
                             bc.logs('-f')
                             def builds = bc.related('builds')
                             builds.untilEach(1) {
-                                return (it.object().status.phase == "Completscript {e")
+                                return (it.object().status.phase == "Completed")
                             }
                         }
                     }
